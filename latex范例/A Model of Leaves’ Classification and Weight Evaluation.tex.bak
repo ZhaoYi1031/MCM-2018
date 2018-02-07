@@ -1,0 +1,114 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%This is << TCS.tex >> wrote by using the LaTeX2e class elsarticle
+%Title: "On Distributivity Equations of Implications and Contrapositive Symmetry Equations of Implications"
+%Authors:  Xiaojun Ruan
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[fleqn,preprint,3p,a4paper]{elsarticle}
+\usepackage{amsmath,amsthm,amssymb} %included to use alignment structures for equations
+\usepackage[all]{xy}
+%\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newdefinition{definition}[theorem]{Definition}
+\newdefinition{remark}[theorem]{Remark}
+\newdefinition{example}[theorem]{Example}
+\newdefinition{problem}[theorem]{Problem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frontmatter}
+\title{A Model of Leaves¡¯ Classification and Weight Evaluation\footnote{Supported by the National Natural Science Foundation of China (Nos. 10861007, 11161023), the Fund for the Author of National Excellent Doctoral Dissertation of China (No. 2007B14), the Ganpo 555 programma for leading talents of Jiangxi Province, the NFS of Jiangxi Province (Nos. 20114BAB201008, 20132BAB2010031), the Fund of Education Department of Jiangxi Province (No. GJJ12163).}}
+\author{Xiaoer Wang\fnref{XEW1}}
+\ead{wxe54@163.com}
+\author{Si Li\fnref{LS}}
+\ead{lisi2002@163.com} \cortext[one]{Corresponding
+author.Tel.:+86 791 83969510}
+\address[XEW1]{Department of Mathematics, Nanchang University, Nanchang, Jiangxi 330031, P. R. China}
+
+\address[LS]{Department of Mathematics, Nanchang University, Nanchang, Jiangxi 330031, P. R. China}
+
+\begin{abstract}
+ In biology perspective, shapes of a tree¡¯s leaves are a response to both own genetic factor and ecosystem¡¯s limiting factor ; all these two factors will be revealed on tree¡¯s feature attribute. This article focuses on the view of leaf¡¯s diversity, mainly from tree¡¯s general feature perspective (tree¡¯s rest energy, distribution of leaves and branches, tree¡¯s profile). By using Wood¡¯s SunScan canopy analysis equations and reverse calculation of beer¡¯s law, on the basis of Campbell¡¯s study, we obtain the quantitative relation between the leaves¡¯ shape and the tree¡¯s optimization structure factor. Then we fit the obtained data matrixes by using Gaussian Fitting method. According to the graph theory analysis, shapes are divided into three categories. Furthermore, we valid the model results by fitting the representative 48 kinds samples through Smooth spline function .
+For a tree¡¯s total leaves weight calculation, on the basis of previous research, we derive and publish a quantitative relation formula between leaf¡¯s weight and several control factors (crown¡¯s DBH, height, profile etc.). Then through sensitive analyzing of the result with the data collected from practical situation, the possibility of this model is proved.
+
+\end{abstract}
+
+\begin{keyword}
+genetic factor, graph theory analysis, height, Weight Evaluation, optimization structure factor
+
+\end{keyword}
+
+\end{frontmatter}
+
+
+\section{Introduction}
+Trees,  the most beautiful and useful products of the nature on earth are mostly defined as a woody plant that has many secondary branches supported clear of the ground on a single main stem or trunk with clear apical dominance[1]. ¡°Trees come in various shapes and sizes but all have the same basic structure [2].¡±  A tree consists of five main components: roots, trunk, branches, leaves and reproductive parts (flowers and fruits or cones) (figure. 1). For the portion of the tree above the ground, trunk, branches and leaves contribute most part. Trees are an extremely important component of the natural landscape and play a decisive role in producing oxygen and reducing carbon dioxide in the atmosphere. Some of the descriptive characteristic variables are shown as below (figure.2)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{ Notations and Assumptions}
+\subsection{ Basic Terms and Variables}
+
+\subsection{ Model Assumptions}
+
+
+
+
+\section{The Model}
+${x: x^{2}+2x+1=0}$
+
+
+
+
+
+\section{Validation of the model}
+
+
+\section{Discussion of the Model Result}
+
+
+\section{Conclusions}
+
+\section{The letter to the science magazine}
+Dear editor:
+
+      We are very glad to have the privileges to introduce our research results about our group¡¯s view in the classifying of the leaves and the calculation of the leaves¡¯ mass.
+
+     According to the Preliminary analysis, we establish a model, define the energy $E_{p}$ as the final residual energy of the leaves.
+
+    We set $E_{p}=E_{o}\cdot h$. where,
+
+\vskip 3mm
+
+$$\xymatrix{
+ (X, \tau) \ar[dr]_{f=\varphi\circ p^{0}} \ar[r]^{p^{0}\ \ \ \ \ \ \ }  & (p(X), \tau\mid_{p(X)}) \ar[d]_{\varphi} \ar[r]^{\ \ \ \ \ \ j_{p(X)}} & (X, \tau)\\
+                                                          & (Y, \eta)  \ar@<-1ex>[u]_{\varphi^{-1}}\ar[ur]_{j=j_{p(X)}\circ \varphi^{-1}}       }
+$$
+
+
+
+\begin{thebibliography}{99}
+\bibitem{Abramsky_Jung_1994}http://en.wikipedia.org/wiki/Tree.
+\bibitem{E_1981}Wei ming, Scott convergence and Scott topology on partially ordered sets II. In: B. Banaschewski and R.-E. Hoffman, eds., Continuous Lattices, Bremen 1979, Lecture Notes in Math. 871, Springer-Verlag, Berlin-Heidelberg-New York, (1981), 61--96.
+\bibitem{E_2009}Wei ming, why leaves have so many shapes?,
+Topology and its Applications, ${\bf{156}}$(2011), 2054--2069.
+
+\bibitem{M_1981}G. Markowsky, A motivation and generalization of Scott's notion of
+a continuous lattice. In: B. Banaschewski and R. E. Hoffman, eds.,Continuous Lattices, Bremen 1979, Lecture Notes in Math.
+Springer-Verlag, Berlin-Heidelberg-New York, ${\bf{871}}$(1981), 298--307.
+
+\bibitem{XX_2009}X. X. Mao, L. S. Xu, Quasicontinuity of Posets via Scott Topology and Sobrification, Order ${\bf{23}}$(2006), 359--369.
+
+
+\end{thebibliography}
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
