@@ -1,0 +1,49 @@
+\documentclass[a4paper,12pt]{article}
+    \usepackage[XXXXX]{MCMthesis}\problem{A}    %填写控制号、题号，年份不需要填（自动以当前电脑时间年份为准）
+    \usepackage{palatino} %这个是COMAP官方杂志的字体，如不需要可注释掉（以使用默认字体）
+    
+    %设置图表标题与上下文的间距
+    \setlength{\belowcaptionskip}{4pt}
+    \setlength{\abovecaptionskip}{4pt}
+    
+    %目录显示自定义
+    \usepackage{titlesec}
+    \usepackage{titletoc}
+    \setcounter{tocdepth}{2}    %目录显示到subsection(2),若要到subsubsection(3)请自改
+    
+    \usepackage[font=small,]{caption}   %使图表标题字号小一号
+    \def\abstractname{Summary}  %摘要标题
+    \title{An MCM Paper Made by XXXXX}  %标题
+    
+    \begin{document}
+    
+    %----------以下是摘要部分----------
+    \begin{abstract}\small
+        Here is the abstract of your paper.
+    
+        Firstly, that is ...
+    
+        Secondly, that is ...
+    
+        Finally, that is ...
+    
+    \end{abstract}
+    
+    %---------以下生成sheet页----------
+    %\renewcommand{\baselinestretch}{0.6}\normalsize    %该语句可调整行距（数值为标准行距之倍数），对其后到再次修改前的部分有效，请自行使用
+    \maketitle  %生成sheet页
+    \pagestyle{empty}
+    
+    %---------以下生成目录----------
+    \newpage
+    \tableofcontents
+    \newpage
+    
+    %---------以下生成正文----------
+    \pagestyle{fancy}
+    \setlength\parskip{0.8\baselineskip}  %调整段间距
+    \setcounter{page}{1}    %从正文开始计页码
+    \input{body.tex}    %正文及Reference内容均在body.tex中修改
+    
+    \end{document}
+    

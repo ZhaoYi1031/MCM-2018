@@ -1,0 +1,171 @@
+\documentclass{mcmthesis}
+\mcmsetup{CTeX = false,   % 使用 CTeX 套装时，设置为 true
+        tcn = 10086, problem = B,
+        sheet = true, titleinsheet = true, keywordsinsheet = false,
+        titlepage = true, abstract = true}
+\usepackage{palatino}
+\usepackage{lipsum}
+\title {How many languages}
+\author{Zhao Yi, Peng Xutan, Chen Dengbo}
+\date{\today}
+
+
+\begin{document}
+\begin{abstract}
+
+  \indent With the development of globalization, people get to know more about other tongues, so the research about the language rises. Recently, a multinational service company wants to expand to be more international and have employees who can speak different several languages. For this sake it needs to know the trends of global languages and wants to get advice about new offices's locations.\\
+  \indent In order to predict how languages of the world may vary over time, we build a prediction model, using data we collected from Twitter and other sources. Use this model, we predict the trends of native speakers and total language speaks in the next 50 years and find that ... .\\
+  \indent Based on the result our model produces, we use K-means algorithm to help us locate the best place for the company's global offices, taking the population and location of capital of every country into account. And we compare our recommendations with the global office choosen by world top 500 to verify our method and get great results.
+\begin{keywords}
+  K-means
+\end{keywords}
+\end{abstract}
+\maketitle
+\pagestyle{empty}
+\newpage
+\tableofcontents
+\newpage
+\pagestyle{fancy}
+\setcounter{page}{1}
+\section{Introduction}
+\subsection{Background}
+\subsection{Restatement of the Problem}
+
+  We are required to build a model to predict the trends of global languages, including the number of speakers and the geographic distribution change of the top-10 languages. Then we need to decide where the new international offices of the company should be located, or take efforts to reduce the number of offices.
+
+% \emph{center of percussion} [Brody 1986], \lipsum[5]
+
+% \begin{Theorem} \label{thm:latex}
+% \LaTeX
+% \end{Theorem}
+% \begin{Lemma} \label{thm:tex}
+% \TeX .
+% \end{Lemma}
+% \begin{proof}
+% The proof of theorem.
+% \end{proof}
+
+\section{Basic Assumptions}
+\subsection{Assumption 1.}
+
+  We assume that the land area of every country doesn't change during the period of time we study.
+
+\subsection{Assumption 2.}
+
+  We ignore unpredictable or low-probablity events that may cause great impact to languages trends.
+
+% \begin{figure}[h]
+% \small
+% \centering
+% \includegraphics[width=12cm]{mcmthesis-aaa.eps}
+% \caption{aa} \label{fig:aa}
+% \end{figure}
+
+% \lipsum[8] %\eqref{aa}
+% \begin{equation}
+% a^2 \label{aa}
+% \end{equation}
+
+% \begin{equation}
+% e^{i \theta} = \cos \theta + i \sin \theta \label{bb}
+% \end{equation}
+
+% \[
+%   \begin{pmatrix}{*{20}c}
+%   {a_{11} } & {a_{12} } & {a_{13} }  \\
+%   {a_{21} } & {a_{22} } & {a_{23} }  \\
+%   {a_{31} } & {a_{32} } & {a_{33} }  \\
+%   \end{pmatrix}
+%   = \frac{{Opposite}}{{Hypotenuse}}\cos ^{ - 1} \theta \arcsin \theta \eqno(3)
+% \]
+
+% \lipsum[9]
+
+% \[
+%   p_{j}=\begin{cases} 
+%   0,&\text{if $j$ is odd}\\
+%   r!\,(-1)^{j/2},&\text{if $j$ is even}
+%   \end{cases}
+% \]
+
+% \lipsum[10]
+
+% \[
+%   \arcsin \theta  =
+%   \mathop{{\int\!\!\!\!\!\int\!\!\!\!\!\int}\mkern-31.2mu
+%   \bigodot}\limits_\varphi
+%   {\mathop {\lim }\limits_{x \to \infty } \frac{{n!}}{{r!\left( {n - r}
+%   \right)!}}} \eqno (1)
+% \]
+
+\section{Analysis of the Problem}
+
+\section{Models and Methodology}
+
+\section{The Model Results}
+
+\section{Validating the Model}
+
+\section{Conclusions}
+
+\section{A Summary}
+
+\section{Evaluate of the Mode}
+
+\section{Strengths and weaknesses}
+
+\subsection{Strengths}
+\begin{itemize}
+\item \textbf{Applies widely}\\
+This  system can be used for many types of airplanes, and it also
+solves the interference during  the procedure of the boarding
+airplane,as described above we can get to the  optimization
+boarding time.We also know that all the service is automate.
+\item \textbf{Improve the quality of the airport service}\\
+Balancing the cost of the cost and the benefit, it will bring in
+more convenient  for airport and passengers.It also saves many
+human resources for the airline. \item \textbf{}
+\end{itemize}
+
+
+\begin{thebibliography}{99}
+\bibitem{1} D.~E. KNUTH   The \TeX{}book  the American
+Mathematical Society and Addison-Wesley
+Publishing Company , 1984-1986.
+\bibitem{2}Lamport, Leslie,  \LaTeX{}: `` A Document Preparation System '',
+Addison-Wesley Publishing Company, 1986.
+\bibitem{3}\url{http://www.latexstudio.net/}
+\bibitem{4}\url{http://www.chinatex.org/}
+\end{thebibliography}
+
+\begin{appendices}
+
+\section{First appendix}
+
+\lipsum[13]
+
+Here are simulation programmes we used in our model as follow.\\
+
+\textbf{\textcolor[rgb]{0.98,0.00,0.00}{Input matlab source:}}
+\lstinputlisting[language=Matlab]{./code/mcmthesis-matlab1.m}
+
+\section{Second appendix}
+
+some more text \textcolor[rgb]{0.98,0.00,0.00}{\textbf{Input C++ source:}}
+\lstinputlisting[language=C++]{./code/mcmthesis-sudoku.cpp}
+
+\end{appendices}
+\end{document}
+
+%% 
+%% This work consists of these files mcmthesis.dtx,
+%%                                   figures/ and
+%%                                   code/,
+%% and the derived files             mcmthesis.cls,
+%%                                   mcmthesis-demo.tex,
+%%                                   README,
+%%                                   LICENSE,
+%%                                   mcmthesis.pdf and
+%%                                   mcmthesis-demo.pdf.
+%%
+%% End of file `mcmthesis-demo.tex'.
