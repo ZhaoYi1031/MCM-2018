@@ -1,21 +1,25 @@
 \documentclass{mcmthesis}
 \mcmsetup{CTeX = false,   % 使用 CTeX 套装时，设置为 true
-        tcn = 10086, problem = B,
+        tcn = 88022, problem = B,
         sheet = true, titleinsheet = true, keywordsinsheet = false,
         titlepage = true, abstract = true}
+\usepackage[english]{babel}
+% \usepackage{fontspec}
 \usepackage{palatino}
 \usepackage{lipsum}
 \title {How many languages}
 \author{Zhao Yi, Peng Xutan, Chen Dengbo}
 \date{\today}
 
-
 \begin{document}
+% \setmainfont{Times New Roman}
 \begin{abstract}
 
-  \indent With the development of globalization, people get to know more about other tongues, so the research about the language rises. Recently, a multinational service company wants to expand to be more international and have employees who can speak different several languages. For this sake it needs to know the trends of global languages and wants to get advice about new offices's locations.\\
-  \indent In order to predict how languages of the world may vary over time, we build a prediction model, using data we collected from Twitter and other sources. Use this model, we predict the trends of native speakers and total language speaks in the next 50 years and find that ... .\\
-  \indent Based on the result our model produces, we use K-means algorithm to help us locate the best place for the company's global offices, taking the population and location of capital of every country into account. And we compare our recommendations with the global office choosen by world top 500 to verify our method and get great results.
+  %\indent With the development of globalization, people get to know more about other tongues, so the research about the language rises. Recently, a multinational service company wants to expand to be more international and have employees who can speak different several languages. For this sake it needs to know the trends of global languages and wants to get advice about new offices's locations.\\
+  \indent This paper establishes the XXX model to predict the trends of global languages and provide the best recommendations about the location of international office for a multinational company.\\
+  \indent Firstly, in order to predict how languages of the world may vary over time, we build a prediction model, using data we collected from \textbf{Twitter} and other sources. Use this model, we predict the trends of native speakers and total language speaks in the next 50 years and find that ... .\\
+  \indent Secondly, based on the result our model produces, we use K-means algorithm to help us locate the best place for the company's global offices, taking the population and location of capital of every country into account. And we compare our recommendations with the global office choosen by world top 500 to verify our method and get great results.\\
+  \indent Thirdly, we studied how would our model's results change with the type of our client company....
 \begin{keywords}
   K-means
 \end{keywords}
@@ -126,6 +130,11 @@ Balancing the cost of the cost and the benefit, it will bring in
 more convenient  for airport and passengers.It also saves many
 human resources for the airline. \item \textbf{}
 \end{itemize}
+\subsection{Weaknesses}
+\begin{itemize}
+  \item \textbf{...}
+  \item \textbf{...}
+\end{itemize}
 
 
 \begin{thebibliography}{99}
@@ -142,30 +151,15 @@ Addison-Wesley Publishing Company, 1986.
 
 \section{First appendix}
 
-\lipsum[13]
-
 Here are simulation programmes we used in our model as follow.\\
 
-\textbf{\textcolor[rgb]{0.98,0.00,0.00}{Input matlab source:}}
-\lstinputlisting[language=Matlab]{./code/mcmthesis-matlab1.m}
+% \textbf{\textcolor[rgb]{0.98,0.00,0.00}{Input matlab source:}}
+% \lstinputlisting[language=Matlab]{./code/mcmthesis-matlab1.m}
 
 \section{Second appendix}
 
-some more text \textcolor[rgb]{0.98,0.00,0.00}{\textbf{Input C++ source:}}
-\lstinputlisting[language=C++]{./code/mcmthesis-sudoku.cpp}
+% some more text \textcolor[rgb]{0.98,0.00,0.00}{\textbf{Input C++ source:}}
+% \lstinputlisting[language=C++]{./code/mcmthesis-sudoku.cpp}
 
 \end{appendices}
 \end{document}
-
-%% 
-%% This work consists of these files mcmthesis.dtx,
-%%                                   figures/ and
-%%                                   code/,
-%% and the derived files             mcmthesis.cls,
-%%                                   mcmthesis-demo.tex,
-%%                                   README,
-%%                                   LICENSE,
-%%                                   mcmthesis.pdf and
-%%                                   mcmthesis-demo.pdf.
-%%
-%% End of file `mcmthesis-demo.tex'.

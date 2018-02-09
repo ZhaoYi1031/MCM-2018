@@ -1,3 +1,4 @@
+\select@language {english}
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}
 \contentsline {subsection}{\numberline {1.1}Background}{1}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}Restatement of the Problem}{1}{subsection.1.2}
@@ -13,6 +14,7 @@
 \contentsline {section}{\numberline {9}Evaluate of the Mode}{2}{section.9}
 \contentsline {section}{\numberline {10}Strengths and weaknesses}{2}{section.10}
 \contentsline {subsection}{\numberline {10.1}Strengths}{2}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Weaknesses}{2}{subsection.10.2}
 \contentsline {section}{Appendices}{3}{section*.2}
 \contentsline {section}{Appendix \numberline {A}First appendix}{3}{Appendix.a.A}
 \contentsline {section}{Appendix \numberline {B}Second appendix}{3}{Appendix.a.B}
