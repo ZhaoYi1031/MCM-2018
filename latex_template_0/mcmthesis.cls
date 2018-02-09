@@ -164,7 +164,8 @@
     \@abstract\par
   }
 \fi
-\def\keywordsname{}
+% \def\keywordsname{}
+\def\keywordsname{Keywords}
 \ifMCM@opt@CTeX
   \newbox\@keywords
   \setbox\@keywords\hbox{}
@@ -172,11 +173,13 @@
   \def\endkeywords{\egroup}%
   \def\make@keywords{%
   %  \par\hskip.4cm\textbf{\keywordsname}: \usebox\@keywords\hfill\par
+   \par\hskip.4cm\textbf{\keywordsname}: \usebox\@keywords\hfill\par
   }
 \else
   \NewEnviron{keywords}{\xdef\@keywords{\expandonce\BODY}}
   \def\make@keywords{%
     % \par\noindent\textbf{\keywordsname}:
+    \par\noindent\textbf{\keywordsname}:
     \@keywords\par
   }
 \fi
