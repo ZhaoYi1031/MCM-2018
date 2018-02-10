@@ -29,13 +29,12 @@ for item in r:
 
     if 'delete' not in str(item):
         try:
+            out=(item.get('id_str','NA')+','+
+                item.get('created_at','NA')+','+
+                item.get('user','NA').get('id_str','NA')+','+item.get('user','NA').get('name','NA').replace(',','~')+','+item.get('user','NA').get('lang','NA')+','+
+                str(item.get('lang','NA')))#nullable
             if counter%5==0:#random/5
-                out=(item.get('id_str','NA')+','+
-                    item.get('created_at','NA')+','+
-                    item.get('user','NA').get('id_str','NA')+','+item.get('user','NA').get('name','NA').replace(',','~')+','+item.get('user','NA').get('lang','NA')+','+
-                    str(item.get('lang','NA')))#nullable
                 result.write(out+'\n')
-
             if item.get('coordinates')!=None:#geo
                 out=out+','+str(item['coordinates'].get('coordinates',[0,0])[0])+','+str(item['coordinates'].get('coordinates',[0,0])[1])+'\n'
                 geo_result.write(out+'\n')
