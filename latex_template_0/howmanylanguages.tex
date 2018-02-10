@@ -17,11 +17,11 @@
 
   %\indent With the development of globalization, people get to know more about other tongues, so the research about the language rises. Recently, a multinational service company wants to expand to be more international and have employees who can speak different several languages. For this sake it needs to know the trends of global languages and wants to get advice about new offices's locations.\\
   \indent This paper establishes the XXX model to predict the trends of global languages and provide the best recommendations about the location of international office for a multinational company.\\
-  \indent Firstly, in order to predict how languages of the world may vary over time, we build a prediction model, using data we collected from \textbf{Twitter} and other sources. Using this model, we predict the trends of native speakers and total language speaks in the next 50 years and find that ... .\\
-  \indent Secondly, based on the result our model produces, we use K-means algorithm to help us locate the best place for the company's global offices, taking the population and location of capital of every country into consideration. And we compare our recommendations with the global office choosen by world top 500 to verify our method and get great results.\\
+  \indent Firstly, in order to predict how languages of the world may vary over time, we build a multiple regression model, using data we collected from \textbf{Twitter} and other sources. Using this model, we predict the trends of native speakers and total language speaks in the next 50 years and find that ... .\\
+  \indent Secondly, based on the result our model produces, we use fuzzy algorithm to help us simulate the distribution of different languages and locate the best place for the company's global offices, taking the population and location of capital of every country into consideration. And we compare our recommendations with the global office choosen by world top 500 to verify our method and get great results.\\
   \indent Thirdly, we studied how would our model's results change with the type of our client company....
 \begin{keywords}
-  K-means
+  Multiple regression model, Fuzzy algorithm
 \end{keywords}
 \end{abstract}
 \maketitle
@@ -34,7 +34,7 @@
 \section{Introduction}
 \subsection{Background}
   \indent \indent Half of the world's population speak one of ten languages as their native language, although there are nearly 7,000 languages spoken on the earth. But with the influence of government, culture, economy and the impact of globalization, popularity of languages may change over the time. \\
-  \indent A COO of a multinational service company wants to know the trends of global languages and locations for this company's new international offices.
+  \indent A COO of a multinational service company wants to know the trends of global languages and locations for this company's new international offices. So we designed a multiple regression model and applied a fuzzy algorithm to help this company make the choice.
 \subsection{Restatement of the Problem}
   \indent \indent We are required to build a model to predict the trends of global languages, including the number of speakers and the geographic distribution change of the top-10 languages. Then we need to decide where the new international offices of the company should be located, or take efforts to reduce the number of offices.
 
@@ -58,7 +58,7 @@
 \subsection{Assumption 2.}
 
   \indent \indent We ignore unpredictable or low-probablity events that may cause great impact to languages trends.
-
+ 
 % \begin{figure}[h]
 % \small
 % \centering
@@ -104,6 +104,8 @@
 % \]
 
 \section{Analysis of the Problem}
+  \indent \indent We consider the distribution of languages as the output of a function related to multiple factors, such as GDP, area, education, immigrants,ethnic fractionalization, population, and foreign trade turnover of countries, number of native speakers of languages, and etc. \\
+  \indent So we build the model like this, assume ...
 
 \section{Models and Methodology}
 
