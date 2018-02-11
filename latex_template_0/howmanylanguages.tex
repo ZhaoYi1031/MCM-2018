@@ -17,11 +17,11 @@
 
   %\indent With the development of globalization, people get to know more about other tongues, so the research about the language rises. Recently, a multinational service company wants to expand to be more international and have employees who can speak different several languages. For this sake it needs to know the trends of global languages and wants to get advice about new offices's locations.\\
   \indent This paper establishes the XXX model to predict the trends of global languages and provide the best recommendations about the location of international office for a multinational company.\\
-  \indent Firstly, in order to predict how languages of the world may vary over time, we build a multiple regression model, using data we collected from \textbf{Twitter} and other sources. Using this model, we predict the trends of native speakers and total language speaks in the next 50 years and find that ... .\\
-  \indent Secondly, based on the result our model produces, we use fuzzy algorithm to help us simulate the distribution of different languages and locate the best place for the company's global offices, taking the population and location of capital of every country into consideration. And we compare our recommendations with the global office choosen by world top 500 to verify our method and get great results.\\
+  \indent Firstly, in order to predict how languages of the world may vary over time, we build a force model and consider the influence a country gives to the other as a force, after getting the resultant force of this model, we can find how the ratio of languages of a country will change in the future. Using this model, we predict the trends of native speakers and total language speaks in the next 50 years and find that ... .\\
+  \indent Secondly, based on the result our model produces, we use K-means algorithm to help us locate the best place for the company's global offices, using data collected from Twitter sampling. And we compare our recommendations with the global office choosen by world top 500 to verify our method and get great results.\\
   \indent Thirdly, we studied how would our model's results change with the type of our client company....
 \begin{keywords}
-  Multiple regression model, Fuzzy algorithm
+  Force model, K-means clustering
 \end{keywords}
 \end{abstract}
 \maketitle
@@ -104,10 +104,20 @@
 % \]
 
 \section{Analysis of the Problem}
-  \indent \indent We consider the distribution of languages as the output of a function related to multiple factors, such as GDP, area, education, immigrants,ethnic fractionalization, population, and foreign trade turnover of countries, number of native speakers of languages, and etc. \\
+  \indent \indent We consider the distribution of languages as the output of a function related to multiple factors, such as GDP, immigrants, population, imports, exports, and etc. These factors not only affect a country's language distribution, but also have an effect on other countries' languages. \\
   \indent So we build the model like this, assume ...
 
 \section{Models and Methodology}
+  \subsection{Time Series Prediction}
+  \indent \indent In order to how the factors we mentioned above will change in the next 50 years, we use the well-known ARIMA model to predict them. ARIMA model, i.e autoregressive integrated moving average model, is a widely used method for predicting time series. Considering these factors change over the time, and to simplify this problem, we regard them as factors only related to time. The ARIMA model can be represented as following form.
+
+  \begin{equation}
+    \left(1-\sum^p_{i=1}\sigma_i L^i\right)(1-L)^d X_t = \left(1+\sum^q_{i=1}\theta_i L^i\right)\epsilon_t
+  \end{equation}
+
+  \indent In the equation above, $L$ stands for Lag Operator, d$\in$Z, d$>$0.
+
+  \indent Considering these factors we use vary randomly and are related to many other factors, so they are not stationary variables and can not be directly used int ARIMA model. So we calculate the difference of factors we study and apply ARIMA model on them. After getting the forecast result we calculate the accumulation to restore prediction result. Take the GDP prediction for an example, we collect the GDP of countries from 2002 to 2016, calculate the difference of adjacent years and use the $auto.arima$ model of R language. After this ARIMA model gives us the prediction of how the difference of a country's GDP will change in the next 50 years, we calculate the accumulation of this prediction values and regard the final result as our prediction on this country's GDP.
 
 \section{The Model Results}
 
