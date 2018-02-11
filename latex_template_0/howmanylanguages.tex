@@ -109,7 +109,7 @@
 
 \section{Models and Methodology}
   \subsection{Time Series Prediction}
-  \indent \indent In order to how the factors we mentioned above will change in the next 50 years, we use the well-known ARIMA model to predict them. ARIMA model, i.e autoregressive integrated moving average model, is a widely used method for predicting time series. Considering these factors change over the time, and to simplify this problem, we regard them as factors only related to time. The ARIMA model can be represented as following form.
+  \indent \indent In order to how the factors we mentioned above will change in the next 50 years, we use the well-known ARIMA model to predict them. ARIMA model, i.e autoregressive integrated moving average model, is a widely used method for predicting time series. Considering these factors change over the time, and in order to simplify this problem, we regard them as factors only related to time. The ARIMA model can be represented as following form.
 
   \begin{equation}
     \left(1-\sum^p_{i=1}\sigma_i L^i\right)(1-L)^d X_t = \left(1+\sum^q_{i=1}\theta_i L^i\right)\epsilon_t
@@ -117,7 +117,18 @@
 
   \indent In the equation above, $L$ stands for Lag Operator, d$\in$Z, d$>$0.
 
-  \indent Considering these factors we use vary randomly and are related to many other factors, so they are not stationary variables and can not be directly used int ARIMA model. So we calculate the difference of factors we study and apply ARIMA model on them. After getting the forecast result we calculate the accumulation to restore prediction result. Take the GDP prediction for an example, we collect the GDP of countries from 2002 to 2016, calculate the difference of adjacent years and use the $auto.arima$ model of R language. After this ARIMA model gives us the prediction of how the difference of a country's GDP will change in the next 50 years, we calculate the accumulation of this prediction values and regard the final result as our prediction on this country's GDP.
+  \indent Considering these factors we use vary randomly and are related to many other factors, so they are not stationary variables and can not be directly used int ARIMA model. So we calculate the difference of factors we study and apply ARIMA model on them. After getting the forecast result we calculate the accumulation to restore prediction result. Take the GDP prediction for an example, we collect the GDP of countries from 2002 to 2016, calculate the difference of adjacent years and use the $auto.arima$ model of R language to help us choose the best parameters for ARIMA model. After this ARIMA model gives us the prediction of how the difference of a country's GDP will change in the next 50 years, we calculate the accumulation of this prediction values and regard the final sum as our prediction on this country's GDP.
+
+  \subsection{K-Means}
+  \indent \indent In order to get the best locations for this company's six new offices, we take the power of social network into consideration. Concretely, we use data sampled in Twitter for 24 hours, which we think can represent the social life of people around the world well. The data sampled from Twitter API gives us the information about the locations of uploaders and the language of tweets and origin language of uploaders when he or she registered Twitter. 
+
+  \indent Considering this company is a multinational service company and needs to be more multinational, the new offices of it should be close to its clients or information. So we mark the locations of tweets uploaders on a world map and use K-means algorithm to find centroids of different clusters of uploaders.
+  
+  \indent Because of the need for multi-language speakers of this company, it is important to consider the language environment of these new offices. To simplify this problem, we regard the uploaders whose tweets use different language from his or her registration language as a potential polyglot, so the language environment around them might be more open and attactive. Based on this assumption we pick those 'polyglots' from our data and apply K-means algorithm on them. After setting $K$ to be equal to 8(This company alreadly has two offices on Shanghai and NewYork, so the total offices it has will be 8), we got the following results.
+
+  \indent Our result shows all eight locations that is appropriate to set up new offices. Apart from the two offices that alreadly exist in Shanghai and NewYork, we can still see the other six new offices. It is shown that they are located in seperated continents on earth, which is in accordence with the need to get a more open language environment.
+
+  \indent The K-means model we use is from $Python$. 
 
 \section{The Model Results}
 
@@ -127,7 +138,7 @@
 
 \section{A Summary}
 
-\section{Evaluate of the Mode}
+\section{Evaluate of the Model}
 
 \section{Strengths and weaknesses}
 
@@ -157,7 +168,6 @@ Publishing Company , 1984-1986.
 \bibitem{2}Lamport, Leslie,  \LaTeX{}: `` A Document Preparation System '',
 Addison-Wesley Publishing Company, 1986.
 % \bibitem{3}\url{http://www.latexstudio.net/}
-% \bibitem{4}\url{http://www.chinatex.org/}
 \end{thebibliography}
 
 \begin{appendices}
