@@ -274,7 +274,7 @@
     commentstyle=\color{darkgreen},%\itshape,%
     stringstyle=\color{black}%
 }
-\lstloadlanguages{C,C++,Java,Matlab,Mathematica}
+\lstloadlanguages{C,C++,Java,Matlab,Mathematica,Python}
 \endinput
 %% 
 %% This work consists of these files mcmthesis.dtx,
