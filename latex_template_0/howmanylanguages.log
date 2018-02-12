@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.1.28)  12 FEB 2018 20:43
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.1.28)  13 FEB 2018 00:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1085,40 +1085,40 @@ LaTeX Info: Redefining \rmfamily on input line 30.
  [1]
 
 LaTeX Font Warning: Font shape `TU/phv/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 113.
+(Font)              using `TU/lmr/m/n' instead on input line 68.
 
-[1]
+[1] [2]
 File: ./figures/world_offices.png Graphic file (type QTm)
- <use  "./figures/world_offices.png" > [2]
+ <use  "./figures/world_offices.png" > [3]
 File: ./figures/paris.png Graphic file (type QTm)
- <use  "./figures/paris.png" >
-[3]
+
+<use  "./figures/paris.png" > [4]
 File: ./figures/elbow_method.png Graphic file (type QTm)
- <use  "./figures/elbow_method.png" > [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+ <use  "./figures/elbow_method.png" > [5]
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
 
 AED: lastpage setting LastPage
 [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 234.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 234.
  (./howmanylanguages.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 229.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 229.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 234.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 234.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 22486 strings out of 493005
- 397129 string characters out of 6140056
- 628163 words of memory out of 5000000
- 26132 multiletter control sequences out of 15000+600000
+ 22487 strings out of 493005
+ 397140 string characters out of 6140056
+ 628335 words of memory out of 5000000
+ 26133 multiletter control sequences out of 15000+600000
  16102 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 41i,11n,67p,10434b,419s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,67p,10434b,368s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on howmanylanguages.pdf (8 pages).
