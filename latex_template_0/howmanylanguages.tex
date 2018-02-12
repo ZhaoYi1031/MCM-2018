@@ -4,20 +4,20 @@
         sheet = true, titleinsheet = true, keywordsinsheet = true,
         titlepage = false, abstract = true}
 \usepackage[english]{babel}
-% \usepackage{fontspec}
+\usepackage{fontspec}
 \usepackage{palatino}
 \usepackage{lipsum}
 \title {How many languages}
 \date{}
 
+\setmainfont{Times New Roman}
 \begin{document}
-% \setmainfont{Times New Roman}
 \begin{abstract}
 
   %\indent With the development of globalization, people get to know more about other tongues, so the research about the language rises. Recently, a multinational service company wants to expand to be more international and have employees who can speak different several languages. For this sake it needs to know the trends of global languages and wants to get advice about new offices's locations.\\
   \indent This paper establishes the XXX model to predict the trends of global languages and provide the best recommendations about the location of international office for a multinational company.\\
   \indent Firstly, in order to predict how languages of the world may vary over time, we build a force model and consider the influence a country gives to the other as a force, after getting the resultant force of this model, we can find how the ratio of languages of a country will change in the future. Using this model, we predict the trends of native speakers and total language speaks in the next 50 years and find that ... .\\
-  \indent Secondly, based on the result our model produces, we use K-means algorithm to help us locate the best place for the company's global offices, using data collected from Twitter sampling. And we compare our recommendations with the global office choosen by world top 500 to verify our method and get great results.\\
+  \indent Secondly, based on the result our model produces, we use K-means algorithm to help us locate the best place for the company's global offices, using data collected from Twitter sampling. And we compare our recommendations with the global office chosen by world top 500 to verify our method and get great results.\\
   \indent Thirdly, we studied how would our model's results change with the type of our client company....
 \begin{keywords}
   Force model, K-means clustering
@@ -27,6 +27,7 @@
 \pagestyle{empty}
 \newpage
 \tableofcontents
+\setmainfont{Times New Roman}
 \newpage
 \pagestyle{fancy}
 \setcounter{page}{1}
@@ -119,15 +120,48 @@
   \indent Considering these factors we use vary randomly and are related to many other factors, so they are not stationary variables and can not be directly used int ARIMA model. So we calculate the difference of factors we study and apply ARIMA model on them. After getting the forecast result we calculate the accumulation to restore prediction result. Take the GDP prediction for an example, we collect the GDP of countries from 2002 to 2016, calculate the difference of adjacent years and use the $auto.arima$ model of R language to help us choose the best parameters for ARIMA model. After this ARIMA model gives us the prediction of how the difference of a country's GDP will change in the next 50 years, we calculate the accumulation of this prediction values and regard the final sum as our prediction on this country's GDP.
 
   \subsection{K-Means}
+
+  \subsubsection{Short Term Recommendation}
+
   \indent \indent In order to get the best locations for this company's six new offices, we take the power of social network into consideration. Concretely, we use data sampled in Twitter for 24 hours, which we think can represent the social life of people around the world well. The data sampled from Twitter API gives us the information about the locations of uploaders and the language of tweets and origin language of uploaders when he or she registered Twitter. 
 
   \indent Considering this company is a multinational service company and needs to be more multinational, the new offices of it should be close to its clients or information. So we mark the locations of tweets uploaders on a world map and use K-means algorithm to find centroids of different clusters of uploaders.
   
-  \indent Because of the need for multi-language speakers of this company, it is important to consider the language environment of these new offices. To simplify this problem, we regard the uploaders whose tweets use different language from his or her registration language as a potential polyglot, so the language environment around them might be more open and attactive. Based on this assumption we pick those 'polyglots' from our data and apply K-means algorithm on them. After setting $K$ to be equal to 8(This company alreadly has two offices on Shanghai and NewYork, so the total offices it has will be 8), we got the following results.
+  \indent Because of the need for multi-language speakers of this company, it is important to consider the language environment of these new offices. To simplify this problem, we regard the uploaders whose tweets use different language from his or her registration language as a potential polyglot, so the language environment around them might be more open and attactive. Based on this assumption we pick those "polyglots" from our data and apply K-means algorithm on them. After setting $K$ to be equal to 8 (This company alreadly has two offices on Shanghai and New York, so the total offices it has will be 8), we got the following results.
 
-  \indent Our result shows all eight locations that is appropriate to set up new offices. Apart from the two offices that alreadly exist in Shanghai and NewYork, we can still see the other six new offices. It is shown that they are located in seperated continents on earth, which is in accordence with the need to get a more open language environment.
+  \begin{figure}
+    \small
+    \centering
+    \includegraphics[width=12cm]{world_offices.png}
+  \end{figure}
+  \newpage
 
-  \indent The K-means model we use is from $Python$. 
+  \indent Our result shows all eight locations that is appropriate to set up new offices. Apart from the two offices that alreadly exist in Shanghai and New York (which may not be exactly on its true place on this map, but in consideration of sampling errors, we think it is still reasonable to regard the points lies on east coast of North America and China to be New York and Shanghai), we can still see the other six new offices. They are located in San Francisco, São Paulo, Paris, Jerusalem, Kinshasa and Singapore. It is shown that they are nearly located in seperated continents on earth, which is in accordence with the need to get a more open language environment.
+
+  \indent In terms of what languages will be spoken in these six new offices, we still use the data from Twitter to help us decide. We collect tweets uploaders near the six new offices and count the types of languages of these tweets. Let us use the office in Paris as an example, we calculate what types of languages are used by uploaders around Paris and how many tweets are uploaded using corresponding language. The result can be shown as follows.
+
+  \begin{figure}
+    \small
+    \centering
+    \includegraphics[width=10cm]{paris.png}
+  \end{figure}
+  \newpage
+
+  \indent So languages spoken in the office in Paris might be English, Spanish, Italian, French and German. And here are the languages spoken in other new offices.
+  \begin{itemize}
+    \item Office in San Francisco: English, Spanish, French, Japanese and Portuguese.
+    \item Office in São Paulo: Portuguese, Spanish, English, Japanese and Finnish.
+    \item Office in Jerusalem: Turkish, English, Russian, Arabic and Japanese.
+    \item Office in Kinshasa: English, Spanish, French, Portuguese and Afrikaans.
+    \item Office in Singapore: Chinese Mandarin, English, Indonesian, Thai and Spanish.
+  \end{itemize} 
+
+  \indent The K-means model we use is from $Python$. It uses an effective k-means++ algorithm to speed up the total clustering process. The intuition of k-means++ algorithm can be interpreted as follows: when choosing the next centroid, always choose the centroid that is far from all centroids that have already been chosen. This meets with the desire to be more international because it disperses the new offices and make them distributed globally. 
+
+  \subsubsection{Long Term Recommendation}
+  \subsubsection{Less Offices}
+  
+
 
 \section{The Model Results}
 
@@ -136,8 +170,6 @@
 \section{Conclusions}
 
 \section{A Summary}
-
-\section{Evaluate of the Model}
 
 \section{Strengths and weaknesses}
 

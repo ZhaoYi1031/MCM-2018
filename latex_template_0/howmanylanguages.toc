@@ -9,14 +9,16 @@
 \contentsline {section}{\numberline {4}Models and Methodology}{2}{section.4}
 \contentsline {subsection}{\numberline {4.1}Time Series Prediction}{2}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}K-Means}{2}{subsection.4.2}
-\contentsline {section}{\numberline {5}The Model Results}{3}{section.5}
-\contentsline {section}{\numberline {6}Validating the Model}{3}{section.6}
-\contentsline {section}{\numberline {7}Conclusions}{3}{section.7}
-\contentsline {section}{\numberline {8}A Summary}{3}{section.8}
-\contentsline {section}{\numberline {9}Evaluate of the Model}{3}{section.9}
-\contentsline {section}{\numberline {10}Strengths and weaknesses}{3}{section.10}
-\contentsline {subsection}{\numberline {10.1}Strengths}{3}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Weaknesses}{3}{subsection.10.2}
-\contentsline {section}{Appendices}{4}{section*.2}
-\contentsline {section}{Appendix \numberline {A}First appendix}{4}{Appendix.a.A}
-\contentsline {section}{Appendix \numberline {B}Second appendix}{4}{Appendix.a.B}
+\contentsline {subsubsection}{\numberline {4.2.1}Short Term Recommendation}{2}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Long Term Recommendation}{4}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Less Offices}{4}{subsubsection.4.2.3}
+\contentsline {section}{\numberline {5}The Model Results}{4}{section.5}
+\contentsline {section}{\numberline {6}Validating the Model}{4}{section.6}
+\contentsline {section}{\numberline {7}Conclusions}{4}{section.7}
+\contentsline {section}{\numberline {8}A Summary}{4}{section.8}
+\contentsline {section}{\numberline {9}Strengths and weaknesses}{4}{section.9}
+\contentsline {subsection}{\numberline {9.1}Strengths}{4}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Weaknesses}{5}{subsection.9.2}
+\contentsline {section}{Appendices}{5}{section*.2}
+\contentsline {section}{Appendix \numberline {A}First appendix}{5}{Appendix.a.A}
+\contentsline {section}{Appendix \numberline {B}Second appendix}{5}{Appendix.a.B}
