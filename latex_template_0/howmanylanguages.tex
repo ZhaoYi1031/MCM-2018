@@ -121,7 +121,7 @@
 
   \subsection{K-Means}
 
-  \subsubsection{Short Term Recommendation}
+  \subsubsection{New Offices}
 
   \indent \indent In order to get the best locations for this company's six new offices, we take the power of social network into consideration. Concretely, we use data sampled in Twitter for 24 hours, which we think can represent the social life of people around the world well. The data sampled from Twitter API gives us the information about the locations of uploaders and the language of tweets and origin language of uploaders when he or she registered Twitter. 
 
@@ -158,13 +158,23 @@
 
   \indent The K-means model we use is from $Python$. It uses an effective k-means++ algorithm to speed up the total clustering process. The intuition of k-means++ algorithm can be interpreted as follows: when choosing the next centroid, always choose the centroid that is far from all centroids that have already been chosen. This meets with the desire to be more international because it disperses the new offices and make them distributed globally. 
 
-  \subsubsection{Long Term Recommendation}
   \subsubsection{Less Offices}
+
+  \indent \indent The K-means model can also help us identify the best number of new offices. We transform the problem into finding best number of clusters in a data set. Here we use the elbow method, which is a convenient but also efficient way to find the best K in K-means algorithm. The key index of this method is SSE(sum of squared errors), which is defined as follows:
+  \begin{equation}
+    \mathop{SSE} = \sum^k_{i=1}\sum_{p\in C_i}\left|p-m_i\right|^2
+  \end{equation}
+  \indent Where $k$ stands for the number of clusters and $m_i$ denotes the centroid of cluster $i$, so $p$ is the point in cluster $i$. The elbow method tells us that generally when the number of clusters increases, the SSE of whole model will descend rapidly at first but slow down soon afterwards. So an "elbow" point will appear and it corresponds to the best number of clusters that the K-means algorithm should choose. Here is the elbow method result for this problem.
+
+  \begin{figure}
+    \small
+    \centering
+    \includegraphics[width=12cm]{elbow_method.png}
+  \end{figure}
+  \newpage
+
+  \indent According to this result, this company should open two more international offices, as the best number of clusters should be four. And after using the K-means algorithm above we got the result that the two new international offices should be located in Paris andSão Paulo.
   
-
-
-\section{The Model Results}
-
 \section{Validating the Model}
 
 \section{Conclusions}
